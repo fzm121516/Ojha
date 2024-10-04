@@ -19,6 +19,8 @@ from dataset_paths import DATASET_PATHS
 import random
 import shutil
 from scipy.ndimage.filters import gaussian_filter
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 SEED = 0
 def set_seed():
@@ -289,24 +291,53 @@ if __name__ == '__main__':
 
 
 
-    for dataset_path in (dataset_paths):
+    # for dataset_path in (dataset_paths):
+    #     set_seed()
+
+    #     dataset = RealFakeDataset(  dataset_path['real_path'], 
+    #                                 dataset_path['fake_path'], 
+    #                                 dataset_path['data_mode'], 
+    #                                 opt.max_sample, 
+    #                                 opt.arch,
+    #                                 jpeg_quality=opt.jpeg_quality, 
+    #                                 gaussian_sigma=opt.gaussian_sigma,
+    #                                 )
+
+    #     loader = torch.utils.data.DataLoader(dataset, batch_size=opt.batch_size, shuffle=False, num_workers=4)
+    #     ap, r_acc0, f_acc0, acc0, r_acc1, f_acc1, acc1, best_thres = validate(model, loader, find_thres=True)
+
+    #     with open( os.path.join(opt.result_folder,'ap.txt'), 'a') as f:
+    #         f.write(dataset_path['key']+': ' + str(round(ap*100, 2))+'\n' )
+
+    #     with open( os.path.join(opt.result_folder,'acc0.txt'), 'a') as f:
+    #         f.write(dataset_path['key']+': ' + str(round(r_acc0*100, 2))+'  '+str(round(f_acc0*100, 2))+'  '+str(round(acc0*100, 2))+'\n' )
+
+
+    for dataset_path in dataset_paths:
         set_seed()
 
-        dataset = RealFakeDataset(  dataset_path['real_path'], 
-                                    dataset_path['fake_path'], 
-                                    dataset_path['data_mode'], 
-                                    opt.max_sample, 
-                                    opt.arch,
-                                    jpeg_quality=opt.jpeg_quality, 
-                                    gaussian_sigma=opt.gaussian_sigma,
-                                    )
+        dataset = RealFakeDataset(
+            dataset_path['real_path'], 
+            dataset_path['fake_path'], 
+            dataset_path['data_mode'], 
+            opt.max_sample, 
+            opt.arch,
+            jpeg_quality=opt.jpeg_quality, 
+            gaussian_sigma=opt.gaussian_sigma,
+        )
 
         loader = torch.utils.data.DataLoader(dataset, batch_size=opt.batch_size, shuffle=False, num_workers=4)
         ap, r_acc0, f_acc0, acc0, r_acc1, f_acc1, acc1, best_thres = validate(model, loader, find_thres=True)
 
-        with open( os.path.join(opt.result_folder,'ap.txt'), 'a') as f:
-            f.write(dataset_path['key']+': ' + str(round(ap*100, 2))+'\n' )
+        # 输出格式与之前一致
+        print(f"Dataset: {dataset_path['key']}")
+        print("  acc0: {0:6.2f};  ap: {1:6.2f};  r_acc0: {2:6.2f};  f_acc0: {3:6.2f};  acc1: {4:6.2f};  r_acc1: {5:6.2f};  f_acc1: {6:6.2f}".format(
+            acc0 * 100, ap * 100, r_acc0 * 100, f_acc0 * 100, acc1 * 100, r_acc1 * 100, f_acc1 * 100))
 
-        with open( os.path.join(opt.result_folder,'acc0.txt'), 'a') as f:
-            f.write(dataset_path['key']+': ' + str(round(r_acc0*100, 2))+'  '+str(round(f_acc0*100, 2))+'  '+str(round(acc0*100, 2))+'\n' )
+        with open(os.path.join(opt.result_folder, 'ap.txt'), 'a') as f:
+            f.write(dataset_path['key'] + ': ' + str(round(ap * 100, 2)) + '\n')
+
+        with open(os.path.join(opt.result_folder, 'acc0.txt'), 'a') as f:
+            f.write(dataset_path['key'] + ': ' + str(round(r_acc0 * 100, 2)) + '  ' + 
+                      str(round(f_acc0 * 100, 2)) + '  ' + str(round(acc0 * 100, 2)) + '\n')
 
