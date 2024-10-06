@@ -7,6 +7,12 @@ DATASET_PATHS = [
         data_mode='wang2020',
         key='progan'
     ),
+        dict(
+        real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/RealESRGAN_x4plus',     
+        fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/RealESRGAN_x4plus',
+        data_mode='wang2020',
+        key='RealESRGAN_x4plus'
+    ),
     #     dict(
     #     real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/jpeg_95',     
     #     fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/jpeg_95',

@@ -1,1 +1,2 @@
-progan: 98.58
+progan: 100.0
+RealESRGAN_x4plus: 86.73

@@ -1,1 +1,2 @@
-progan: 95.2  91.3  93.25
+progan: 99.7  99.9  99.8
+RealESRGAN_x4plus: 24.0  96.8  60.4
