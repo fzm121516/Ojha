@@ -329,7 +329,7 @@ if __name__ == '__main__':
         loader = torch.utils.data.DataLoader(dataset, batch_size=opt.batch_size, shuffle=False, num_workers=4)
         ap, r_acc0, f_acc0, acc0, r_acc1, f_acc1, acc1, best_thres = validate(model, loader, find_thres=True)
 
-        # 输出格式与之前一致
+
         print(f"Dataset: {dataset_path['key']}")
         print("  acc0: {0:6.2f};  ap: {1:6.2f};  r_acc0: {2:6.2f};  f_acc0: {3:6.2f};  acc1: {4:6.2f};  r_acc1: {5:6.2f};  f_acc1: {6:6.2f}".format(
             acc0 * 100, ap * 100, r_acc0 * 100, f_acc0 * 100, acc1 * 100, r_acc1 * 100, f_acc1 * 100))

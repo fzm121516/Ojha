@@ -7,12 +7,30 @@ DATASET_PATHS = [
         data_mode='wang2020',
         key='progan'
     ),
-        dict(
-        real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/AdditiveGaussianNoise(scale=(0, 0.05*255), per_channel=True)',     
-        fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/AdditiveGaussianNoise(scale=(0, 0.05*255), per_channel=True)',
-        data_mode='wang2020',
-        key='proganAdditiveGaussianNoise(scale=(0, 0.05*255), per_channel=True'
-    ),
+    #     dict(
+    #     real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/jpeg_95',     
+    #     fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/jpeg_95',
+    #     data_mode='wang2020',
+    #     key='jpeg_95'
+    # ),
+    #     dict(
+    #     real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/gaussian_blur_sigma=1',     
+    #     fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/gaussian_blur_sigma=1',
+    #     data_mode='wang2020',
+    #     key='gaussian_blur_sigma=1'
+    # ),
+    #     dict(
+    #     real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/gaussian_blur_sigma=2',     
+    #     fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/gaussian_blur_sigma=2',
+    #     data_mode='wang2020',
+    #     key='gaussian_blur_sigma=2'
+    # ),
+    #     dict(
+    #     real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/AdditiveGaussianNoise(scale=(0, 0.05*255), per_channel=True)',     
+    #     fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/AdditiveGaussianNoise(scale=(0, 0.05*255), per_channel=True)',
+    #     data_mode='wang2020',
+    #     key='proganAdditiveGaussianNoise(scale=(0, 0.05*255), per_channel=True'
+    # ),
 
     #     dict(
     #     real_path='../FAKE_IMAGES/CNN/test/progan',     

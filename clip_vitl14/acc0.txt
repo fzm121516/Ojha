@@ -1,2 +1,1 @@
-progan: 99.7  99.9  99.8
-proganAdditiveGaussianNoise(scale=(0, 0.05*255), per_channel=True: 95.6  99.4  97.5
+progan: 95.2  91.3  93.25
