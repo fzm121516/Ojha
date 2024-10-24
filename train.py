@@ -4,7 +4,7 @@ from tensorboardX import SummaryWriter  # 从tensorboardX导入SummaryWriter，�
 
 from validate import validate  # 导入validate模块，用于模型验证
 from data import create_dataloader  # 导入create_dataloader模块，用于创建数据加载器
-from early_stopping import EarlyStopping  # 导入EarlyStopping模块，用于实现早停机制
+from early_stopping_pytorch import EarlyStopping # 导入EarlyStopping模块，用于实现早停机制
 from networks.trainer import Trainer  # 导入Trainer模块，用于训练模型
 from options.train_options import TrainOptions  # 导入TrainOptions模块，用于解析训练选项
 

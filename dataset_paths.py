@@ -55,8 +55,8 @@ DATASET_PATHS = [
     # ),
 
         dict(
-        real_path='../FAKE_IMAGES/CNN/test/progan',     
-        fake_path='../FAKE_IMAGES/CNN/test/progan',
+        real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/progan',     
+        fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/progan',
         data_mode='wang2020',
         key='progan'
     ),
