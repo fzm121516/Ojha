@@ -1,18 +1,34 @@
 DATASET_PATHS = [
 
 
-    dict(
-        real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/ForenSynths/progan',     
-        fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/ForenSynths/progan',
-        data_mode='wang2020',
-        key='progan'
-    ),
-        dict(
-        real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/RealESRGAN_x4plus',     
-        fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/RealESRGAN_x4plus',
-        data_mode='wang2020',
-        key='RealESRGAN_x4plus'
-    ),
+#  dict(
+#         real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/ForenSynths/imle',     
+#         fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/ForenSynths/imle',
+#         data_mode='wang2020',
+#         key='imle'
+#     ),
+#  dict(
+#         real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/Diffusion1kStep/guided-diffusion',     
+#         fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/Diffusion1kStep/guided-diffusion',
+#         data_mode='wang2020',
+#         key='guided-diffusion_jpeg_quality30'
+#     ),
+
+
+    # dict(
+    #     real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/ForenSynths/progan',     
+    #     fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/ForenSynths/progan',
+    #     data_mode='wang2020',
+    #     key='progan_gaussian_sigma1'
+    # ),
+    #     dict(
+    #     real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/progan_RealESRGAN_x4plus',     
+    #     fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/progan_RealESRGAN_x4plus',
+    #     data_mode='wang2020',
+    #     key='progan_RealESRGAN_x4plus_gaussian_sigma1'
+    # ),
+
+
     #     dict(
     #     real_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/jpeg_95',     
     #     fake_path='/home/fanzheming/zm/NPR-DeepfakeDetection/dataset/proganwithnoise/jpeg_95',
@@ -38,12 +54,12 @@ DATASET_PATHS = [
     #     key='proganAdditiveGaussianNoise(scale=(0, 0.05*255), per_channel=True'
     # ),
 
-    #     dict(
-    #     real_path='../FAKE_IMAGES/CNN/test/progan',     
-    #     fake_path='../FAKE_IMAGES/CNN/test/progan',
-    #     data_mode='wang2020',
-    #     key='progan'
-    # ),
+        dict(
+        real_path='../FAKE_IMAGES/CNN/test/progan',     
+        fake_path='../FAKE_IMAGES/CNN/test/progan',
+        data_mode='wang2020',
+        key='progan'
+    ),
 
     # dict(
     #     real_path='../FAKE_IMAGES/CNN/test/cyclegan',   

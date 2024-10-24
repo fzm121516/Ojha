@@ -1,2 +1,1 @@
-progan: 100.0
-RealESRGAN_x4plus: 86.73
+guided-diffusion_jpeg_quality30: 88.88
