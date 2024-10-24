@@ -7,7 +7,7 @@ class TrainOptions(BaseOptions):  # 定义TrainOptions类，继承自BaseOptions
         parser.add_argument('--data_aug', action='store_true', help='if specified, perform additional data augmentation (photometric, blurring, jpegging)')  # 添加参数：是否进行额外的数据增强（光度变化、模糊、JPEG压缩）
         parser.add_argument('--optim', type=str, default='adam', help='optim to use [sgd, adam]')  # 添加参数：使用的优化器，默认值为'adam'
         parser.add_argument('--new_optim', action='store_true', help='new optimizer instead of loading the optim state')  # 添加参数：是否使用新的优化器，而不是加载优化器状态
-        parser.add_argument('--loss_freq', type=int, default=400, help='frequency of showing loss on tensorboard')  # 添加参数：在TensorBoard上显示损失的频率，默认值为400
+        parser.add_argument('--loss_freq', type=int, default=10, help='frequency of showing loss on tensorboard')  # 添加参数：在TensorBoard上显示损失的频率，默认值为400
         parser.add_argument('--save_epoch_freq', type=int, default=1, help='frequency of saving checkpoints at the end of epochs')  # 添加参数：保存检查点的频率（周期数），默认值为1
         parser.add_argument('--epoch_count', type=int, default=1, help='the starting epoch count, we save the model by <epoch_count>, <epoch_count>+<save_latest_freq>, ...')  # 添加参数：起始周期计数，默认值为1
         parser.add_argument('--last_epoch', type=int, default=-1, help='starting epoch count for scheduler initialization')  # 添加参数：调度器初始化时的起始周期计数，默认值为-1
